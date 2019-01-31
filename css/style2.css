@@ -8,6 +8,105 @@ use float to make something locate itself on the right or left
 */
 
 body{
-    padding: 30px;
-    background-color: #ffffff;
+  padding: 30px;
+  background-color: #77716f;
+  display: flex; /* this is the flexbox model. It adds responsive design to its items */
+  flex-direction: column; /* this says how the flex items will align (e.g. 'row') */
+  align-items: left; /* These next two properties center the flex items */
+  justify-content: center;
+}
+
+#style {
+  position: fixed;
+  background-color: #141211;
+  left: 0;
+  min-height:100%;
+  top: 0;
+
+  padding-top: 10px;
+}
+
+#style li a {
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px; /*this adds some spacing around the items in our "nav bar" */
+  text-decoration: none;
+}
+
+#style ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #141211;
+}
+
+.section {
+  max-width: 48em;
+  margin-left: 40px;
+  margin-right: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: double;
+  border-color: black;
+
+}
+
+#main-title {
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#courses {
+  background-color: #5FB8C0;
+}
+
+#pslo {
+  background-color: #BE2414
+}
+
+#faculty-list {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* This tell's the flex items to wrap if there
+                        isn't enough space for all of the items. Without this the
+                        faculty images will be in a row and only resize well unitl around
+                 ffffff       550px width of screen. */
+  justify-content: center;
+  align-content: center;
+}
+#faculty {
+  background-color: #f9f7f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#faculty>ul>li {
+  display: inline-block;
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+.faculty-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: right;
+}
+
+#validation {
+  background-color: #141211;
+  padding: 25px;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: double;
+  border-color: black;
+  display: block;
+  color: white;
 }
