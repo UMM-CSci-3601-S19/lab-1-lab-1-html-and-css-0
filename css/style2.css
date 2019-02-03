@@ -8,11 +8,12 @@ use float to make something locate itself on the right or left
 */
 
 body{
+
   padding: 30px;
   background-color: #77716f;
   display: flex; /* this is the flexbox model. It adds responsive design to its items */
   flex-direction: column; /* this says how the flex items will align (e.g. 'row') */
-  align-items: left; /* These next two properties center the flex items */
+  align-items: center; /* These next two properties center the flex items */
   justify-content: center;
 }
 
@@ -97,7 +98,6 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: right;
 }
 
 #validation {
@@ -109,4 +109,14 @@ body{
   border-color: black;
   display: block;
   color: white;
+
+    padding: 15px;
+    background-color: #6F6968;
+  display: flex; /* this is the flexbox model. It adds responsive design to its items */
+  flex-direction: column; /* this says how the flex items will align (e.g. 'row') */
+  align-items: center; /* These next two properties center the flex items */
+  justify-content: center;
+
 }
+
+
