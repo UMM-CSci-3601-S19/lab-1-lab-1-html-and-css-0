@@ -8,6 +8,61 @@ use float to make something locate itself on the right or left
 */
 
 body{
-    padding: 30px;
-    background-color: #aaaaaa;
+  padding: 30px;
+  background-image: url(../assets/images/packers.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  font-style: oblique;
+}
+
+.faculty-container:hover {
+  opacity: 1.0;
+  background-image: linear-gradient(to right, green, black);
+  border: solid;
+
+}
+
+.faculty-container {
+  opacity: 0.5;
+}
+
+#pslo:hover {
+  opacity: 1.0;
+  background-image: linear-gradient(to right, white, black);
+  border: solid;
+}
+
+#pslo{
+  opacity: 0.5;
+}
+
+#courses:hover {
+  opacity: 1.0;
+  background-image: linear-gradient(to right, yellow, black);
+  border: solid;
+}
+
+p {
+  color: green;
+}
+
+#validation{
+  color:black;
+}
+
+li {
+  color: green;
+}
+
+#faculty li{
+  color: black;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+ color: yellow;
+}
+
+.section {
+
 }
