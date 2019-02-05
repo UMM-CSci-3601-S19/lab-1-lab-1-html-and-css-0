@@ -88,11 +88,26 @@ h1, h2, h3, h4, h5, h6 {
   padding: 25px;
   position: fixed;
   left: 70%;
-  top: 150px;
+  top: 30%;
   max-width: 30%;
 }
 
 #validation p{
   color: black;
 }
+
+#style {
+  opacity: 1.0;
+  background-color: darkgrey;
+  color: white;
+  max-width: 70%;
+  padding: 20px;
+  left:70%;
+  top: 55%;
+  position: fixed;
+  min-width: 30%;
+}
+
+
+
 
