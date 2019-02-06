@@ -7,8 +7,10 @@ use float to make something locate itself on the right or left
 
 */
 
-body{
-  padding: 30px;
+/* This file comments on grouping*/
+
+body{                   /* 1. jpg as background, different because the other two use colors */
+  padding: 10px;
   background-image: url(../assets/images/packers.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -19,18 +21,27 @@ body{
   max-width: 70%;
 }
 
-#faculty:hover {
+.faculty-container {
+}
+
+#faculty:hover { /* 2. this hover selector allows for events based on mouse position, the other two style sheets don't have this. */
   opacity: 1.0;
   background-image: linear-gradient(to right, black, green);
   border: solid;
 }
 
 #faculty {
-  opacity: 0.5;
+  opacity: 0.5;     /* 3. allows the background to be seen when the mouse is not hovering any boxes*/
+  margin-left: 0px; /* neither of the other sheets have this */
 }
 
 #faculty li {
   list-style: square;
+}
+
+.pic {
+  max-width: 75%;
+
 }
 
 .name {
@@ -38,9 +49,10 @@ body{
   font-style: normal;
 }
 
-#pslo:hover {
+#pslo:hover { /* 4. this gradient rule creates a background with a gradient, this is the only style sheet with a gradient */
+
   opacity: 1.0;
-  background-image: linear-gradient(to right, black, white);
+  background-image: linear-gradient(to right, #77716f, black);
   border: solid;
 }
 
@@ -50,7 +62,7 @@ body{
 
 #courses:hover {
   opacity: 1.0;
-  background-image: linear-gradient(to right, black, yellow);
+  background-image: linear-gradient(to right, black, #77716f);
   border: solid;
 }
 
@@ -77,8 +89,9 @@ li {
   color: white;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
+/* this box includes the GROUPING of all of the headers */
+h1, h2, h3, h4, h5, h6 {       /* 5. transformed the text for each header to be in all caps, neither of the other
+                                  sheets transform all of the headers or make them all caps */
   color: white;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -91,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 50% 10px 10px 10px;
   position: fixed;
   left: 70%;
-  bottom: -20%;
+  bottom: -10%;
   max-width: 30%;
   min-height: 100%;
 }
@@ -111,6 +124,30 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   min-width: 30%;
 }
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+@media only screen and (max-width: 414px) {
+  .name {
+    font-size: 120%;
+  }
+  h1 h2 h3 h4 h5 h6 {
+    font-size: 1em;
+  }
+  #validation {
+    font-size: 50%;
+  }
+  #style {
+    padding: 0px;
+  }
+}
+
 
 
 

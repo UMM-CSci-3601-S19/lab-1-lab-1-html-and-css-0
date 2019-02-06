@@ -7,32 +7,36 @@ use float to make something locate itself on the right or left
 
 */
 
+/*This file comments on nesting, ID's and classes */
+
 body{
 
   padding: 30px;
   background-color: #77716f;
-  display: flex; /* this is the flexbox model. It adds responsive design to its items */
-  flex-direction: column; /* this says how the flex items will align (e.g. 'row') */
-  align-items: left; /* These next two properties center the flex items */
-  justify-content: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: left;        /* 1. The css won't validate for this rule because it says it doesn't do anything, */
+  justify-content: center;  /*   but actually it does. This lines all of our items (the pslo boxes, faculty */
+                            /*   boxes, and validation box. */
 }
 
-#style {
+#style {                    /* 2. This rule places our style box on the left of the screen and allows it to scroll */
+                            /* up and down without moving across the screen */
   position: fixed;
   background-color: #141211;
   left: 0;
   min-height:100%;
   top: 0;
-
   padding-top: 10px;
 }
 
+/* this block includes nesting, for example every link INSIDE of a list INSIDE of the style box */
+/* for id, use a pound sign */
 #style li a {
   display: block;
   color: white;
   text-align: left;
-  padding: 14px 16px; /*this adds some spacing around the items in our "nav bar" */
+  padding: 14px 16px;
   text-decoration: none;
 }
 
@@ -44,6 +48,7 @@ body{
   background-color: #141211;
 }
 
+/* the class can be denoted with a . before it */
 .section {
   max-width: 70%;
   margin-left: 40px;
@@ -72,18 +77,15 @@ body{
 }
 
 
-
-
-
+.faculty-container {
+  margin-bottom: 30%;
+}
 
 #faculty-list {
   padding-left: 0;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* This tell's the flex items to wrap if there
-                        isn't enough space for all of the items. Without this the
-                        faculty images will be in a row and only resize well unitl around
-                        550px width of screen. */
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
 }
@@ -101,18 +103,32 @@ body{
   padding: 40px;
 }
 
-/*.faculty-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+#validation {           /* 3. The position of the validation box is relative to the bottom of the body,
+                              this is the only rule with a relative position */
+  position: relative;
+  float: bottom;
+  max-height: 20%;
+  margin-left: 40px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #77716f;
 }
-*/
 
-#validation {
-  font-size: 80%;
-  background-color: #d5d6d2;
-  padding: 25px;
-  position: fixed;
+a:link {                /* 4. This rule changes the color of the unvisited links, we changed this in style sheet 3 as well
+                              but didn't comment on it. */
+  color: white;
+}
+
+a:visited {
+  color: red;
+}
+
+@media only screen and (max-width: 414px) { /* 5.  The pictures change size independently from the rest of the
+                                                   boxes and text. We did this in style3 as well but didn't comment
+                                                   on it. */
+  .faculty-container .pic {
+    max-width: 100%;
+  }
 }
 
 
